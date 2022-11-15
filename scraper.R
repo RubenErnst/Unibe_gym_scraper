@@ -5,7 +5,7 @@ library(RSelenium)
 
 
 chromeDr <- rsDriver(browser = "chrome", port = 4567L, chromever = "106.0.5249.61", # you will have to adjust this version
-                     extraCapabilities = list(chromeOptions = list(args = c('--disable-gpu', '--window-size=1920,1080'),
+                     extraCapabilities = list(chromeOptions = list(args = c('--disable-gpu', '--window-size=1920,1080', '--headless'),
                                                                    prefs = list(
                                                                      "profile.default_content_settings.popups" = 0L,
                                                                      "download.prompt_for_download" = FALSE,
