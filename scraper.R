@@ -32,7 +32,7 @@ while(TRUE){
   print(paste0("Successful snapshot at ", Sys.time()))
   
   save(unibe_gym, file = "unibe_gym.RData")
-  Sys.sleep(895)
+  Sys.sleep(294)
 }
 
 save(unibe_gym, file = "unibe_gym.RData")
