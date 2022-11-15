@@ -29,6 +29,8 @@ while(TRUE){
                                            "sign_color" = sign_color,
                                            "occupants" = occupants))
   
+  print(paste0("Successful snapshot at ", Sys.time()))
+  
   save(unibe_gym, file = "unibe_gym.RData")
   Sys.sleep(895)
 }
