@@ -4,7 +4,7 @@ library(tidyverse)
 library(RSelenium)
 
 
-chromeDr <- rsDriver(browser = "chrome", port = 4570L, chromever = "106.0.5249.61", # you will have to adjust this version
+chromeDr <- rsDriver(browser = "chrome", port = 4571L, chromever = "106.0.5249.61", # you will have to adjust this version
                      extraCapabilities = list(chromeOptions = list(args = c('--disable-gpu', '--window-size=1920,1080', '--headless'),
                                                                    prefs = list(
                                                                      "profile.default_content_settings.popups" = 0L,
@@ -25,7 +25,7 @@ while(TRUE){
     remDr$close()
     chromeDr[["server"]]$stop()
     
-    chromeDr <- rsDriver(browser = "chrome", port = 4567L, chromever = "106.0.5249.61", # you will have to adjust this version
+    chromeDr <- rsDriver(browser = "chrome", port = 4571L, chromever = "106.0.5249.61", # you will have to adjust this version
                          extraCapabilities = list(chromeOptions = list(args = c('--disable-gpu', '--window-size=1920,1080', '--headless'),
                                                                        prefs = list(
                                                                          "profile.default_content_settings.popups" = 0L,
@@ -42,7 +42,7 @@ while(TRUE){
     expr = {
       suppressMessages({
         remDr$navigate(url)
-        Sys.sleep(5)
+        Sys.sleep(10)
         error_occ <- FALSE
       })
     },
@@ -55,7 +55,7 @@ while(TRUE){
     remDr$close()
     chromeDr[["server"]]$stop()
     
-    chromeDr <- rsDriver(browser = "chrome", port = 4567L, chromever = "106.0.5249.61", # you will have to adjust this version
+    chromeDr <- rsDriver(browser = "chrome", port = 4571L, chromever = "106.0.5249.61", # you will have to adjust this version
                          extraCapabilities = list(chromeOptions = list(args = c('--disable-gpu', '--window-size=1920,1080', '--headless'),
                                                                        prefs = list(
                                                                          "profile.default_content_settings.popups" = 0L,
@@ -70,7 +70,7 @@ while(TRUE){
       expr = {
         suppressMessages({
           remDr$navigate(url)
-          Sys.sleep(5)
+          Sys.sleep(10)
         })
       },
       error = function(err){
@@ -102,7 +102,7 @@ while(TRUE){
   
   save(unibe_gym, file = "unibe_gym.RData")
   counter <- counter + 1
-  Sys.sleep(294)
+  Sys.sleep(289)
 }
 
 save(unibe_gym, file = "unibe_gym.RData")
